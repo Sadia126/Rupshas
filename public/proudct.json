@@ -1,0 +1,223 @@
+[
+  {
+    "_id": "1",
+    "name": "Wireless Earbuds Pro",
+    "brand": "SoundMax",
+    "category": "Electronics & Gadgets",
+    "image": "https://i.ibb.co/9hHVR1D/earbuds.jpg",
+    "main_quantity": 300,
+    "minimum_selling_quantity": 10,
+    "price": 45,
+    "rating": 4,
+    "description": "High quality earbuds with noise cancellation."
+  },
+  {
+    "_id": "2",
+    "name": "Smart Watch X7",
+    "brand": "TechNova",
+    "category": "Electronics & Gadgets",
+    "image": "https://i.ibb.co/5kMHftx/smartwatch.jpg",
+    "main_quantity": 200,
+    "minimum_selling_quantity": 5,
+    "price": 70,
+    "rating": 5,
+    "description": "Waterproof smartwatch with fitness tracking."
+  },
+  {
+    "_id": "3",
+    "name": "Gaming Mouse RGB",
+    "brand": "HyperGlide",
+    "category": "Electronics & Gadgets",
+    "image": "https://i.ibb.co/vz5XwtM/gaming-mouse.jpg",
+    "main_quantity": 500,
+    "minimum_selling_quantity": 20,
+    "price": 25,
+    "rating": 4,
+    "description": "Ergonomic mouse with 7 programmable buttons."
+  },
+
+  {
+    "_id": "4",
+    "name": "Microwave Oven 30L",
+    "brand": "KitchenPro",
+    "category": "Home Appliances",
+    "image": "https://i.ibb.co/0JGZ8pD/microwave.jpg",
+    "main_quantity": 100,
+    "minimum_selling_quantity": 2,
+    "price": 120,
+    "rating": 5,
+    "description": "Spacious 30L oven with grill and convection."
+  },
+  {
+    "_id": "5",
+    "name": "Electric Blender 5-Speed",
+    "brand": "MixGenie",
+    "category": "Home Appliances",
+    "image": "https://i.ibb.co/kHqt7rF/blender.jpg",
+    "main_quantity": 150,
+    "minimum_selling_quantity": 3,
+    "price": 40,
+    "rating": 4,
+    "description": "Stainless steel blade blender with 1.5L jar."
+  },
+  {
+    "_id": "6",
+    "name": "Vacuum Cleaner Compact",
+    "brand": "CleanMate",
+    "category": "Home Appliances",
+    "image": "https://i.ibb.co/fY7ZV3c/vacuum.jpg",
+    "main_quantity": 80,
+    "minimum_selling_quantity": 1,
+    "price": 95,
+    "rating": 4,
+    "description": "Portable vacuum cleaner with strong suction."
+  },
+
+  {
+    "_id": "7",
+    "name": "Men’s Casual Shirt Pack",
+    "brand": "FashionHub",
+    "category": "Fashion & Apparel",
+    "image": "https://i.ibb.co/F57LY1T/shirt.jpg",
+    "main_quantity": 300,
+    "minimum_selling_quantity": 10,
+    "price": 20,
+    "rating": 4,
+    "description": "Breathable cotton shirt pack for all seasons."
+  },
+  {
+    "_id": "8",
+    "name": "Women’s Summer Dress",
+    "brand": "Trendify",
+    "category": "Fashion & Apparel",
+    "image": "https://i.ibb.co/dcr4nk3/dress.jpg",
+    "main_quantity": 250,
+    "minimum_selling_quantity": 8,
+    "price": 28,
+    "rating": 5,
+    "description": "Lightweight floral dress for summer comfort."
+  },
+  {
+    "_id": "9",
+    "name": "Unisex Denim Jackets",
+    "brand": "BlueEdge",
+    "category": "Fashion & Apparel",
+    "image": "https://i.ibb.co/QY0qjk1/jacket.jpg",
+    "main_quantity": 180,
+    "minimum_selling_quantity": 6,
+    "price": 50,
+    "rating": 4,
+    "description": "Classic blue denim jacket for men and women."
+  },
+
+  {
+    "_id": "10",
+    "name": "Hydraulic Press Machine",
+    "brand": "PressMaster",
+    "category": "Industrial Machinery",
+    "image": "https://i.ibb.co/nwFTRVL/press.jpg",
+    "main_quantity": 20,
+    "minimum_selling_quantity": 1,
+    "price": 1200,
+    "rating": 5,
+    "description": "Heavy-duty hydraulic press for metal shaping."
+  },
+  {
+    "_id": "11",
+    "name": "Welding Equipment Kit",
+    "brand": "WeldPro",
+    "category": "Industrial Machinery",
+    "image": "https://i.ibb.co/XVmPCZD/welding.jpg",
+    "main_quantity": 40,
+    "minimum_selling_quantity": 2,
+    "price": 450,
+    "rating": 4,
+    "description": "Complete welding set with mask, wires, and torch."
+  },
+  {
+    "_id": "12",
+    "name": "CNC Milling Machine",
+    "brand": "MachinaTech",
+    "category": "Industrial Machinery",
+    "image": "https://i.ibb.co/XDPxy7q/cnc.jpg",
+    "main_quantity": 15,
+    "minimum_selling_quantity": 1,
+    "price": 2500,
+    "rating": 5,
+    "description": "Precision CNC machine for industrial production."
+  },
+
+  {
+    "_id": "13",
+    "name": "Organic Aloe Vera Gel",
+    "brand": "NaturePure",
+    "category": "Health & Beauty",
+    "image": "https://i.ibb.co/xjvSBMn/aloe.jpg",
+    "main_quantity": 400,
+    "minimum_selling_quantity": 20,
+    "price": 10,
+    "rating": 4,
+    "description": "Skin soothing aloe vera for daily use."
+  },
+  {
+    "_id": "14",
+    "name": "Herbal Shampoo 500ml",
+    "brand": "GlowHerb",
+    "category": "Health & Beauty",
+    "image": "https://i.ibb.co/M9CGN5g/shampoo.jpg",
+    "main_quantity": 350,
+    "minimum_selling_quantity": 15,
+    "price": 8,
+    "rating": 4,
+    "description": "Hair strengthening herbal shampoo blend."
+  },
+  {
+    "_id": "15",
+    "name": "Vitamin C Serum",
+    "brand": "SkinBright",
+    "category": "Health & Beauty",
+    "image": "https://i.ibb.co/LJdwfJD/serum.jpg",
+    "main_quantity": 300,
+    "minimum_selling_quantity": 10,
+    "price": 18,
+    "rating": 5,
+    "description": "Brightening serum for glowing skin."
+  },
+
+  {
+    "_id": "16",
+    "name": "Executive Notebook Pack",
+    "brand": "PaperPrime",
+    "category": "Office Supplies",
+    "image": "https://i.ibb.co/fHtPqwb/notebooks.jpg",
+    "main_quantity": 500,
+    "minimum_selling_quantity": 25,
+    "price": 5,
+    "rating": 4,
+    "description": "Pack of 5 A5-size notebooks for office use."
+  },
+  {
+    "_id": "17",
+    "name": "Gel Pen Box (50pcs)",
+    "brand": "InkFlow",
+    "category": "Office Supplies",
+    "image": "https://i.ibb.co/6YF7pjL/pens.jpg",
+    "main_quantity": 1000,
+    "minimum_selling_quantity": 50,
+    "price": 15,
+    "rating": 4,
+    "description": "Smooth-writing black gel pens for office supply."
+  },
+  {
+    "_id": "18",
+    "name": "Desk Organizer Set",
+    "brand": "TidyDesk",
+    "category": "Office Supplies",
+    "image": "https://i.ibb.co/5BG7pQJ/organizer.jpg",
+    "main_quantity": 200,
+    "minimum_selling_quantity": 10,
+    "price": 25,
+    "rating": 5,
+    "description": "Multi-compartment organizer for desks."
+  }
+]
