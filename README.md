@@ -1,76 +1,73 @@
 
 # 🛍️ Rupsha - B2B Wholesale Marketplace
 
-**Rupsha** is a responsive, modern web application built for B2B wholesale product listings, purchases, and inventory management. It allows users to browse, buy, and manage bulk products through an intuitive interface.
+**Live Site:** [https://rupshaa-1eb03.web.app](https://rupshaa-1eb03.web.app)
 
----
+Rupsha is a full-stack B2B wholesale web application built to facilitate bulk product listing, ordering, and inventory management. It enables buyers and suppliers to connect through a modern, responsive UI while handling stock, secure routes, and user authentication efficiently.
 
-## 🌐 Live URL
-
-[👉 Visit Live Site](https://rupshaa-1eb03.web.app)
 
 ---
 
 ## 🎯 Project Purpose
 
-This project was developed to demonstrate the functionality of a B2B wholesale platform with the following goals:
+This project simulates a B2B marketplace where:
 
-- Enable users to browse wholesale products.
-- Allow users to purchase products in bulk with minimum quantity enforcement.
-- Secure routes using JWT and Firebase Authentication.
-- Manage inventory stock automatically during order placement and cancellation.
+- Users can **browse wholesale products** by category
+- Orders are placed in **bulk with minimum quantity enforcement**
+- Inventory adjusts automatically after purchase/cancellation
+- All sensitive routes are protected using **JWT and Firebase Auth**
 
 ---
 
 ## ✨ Key Features
 
-- 🔐 **Authentication** (Email/Password & Google) via Firebase
-- 📦 **Product Management** (CRUD operations)
-- 🛒 **Order Placement** with stock validation
-- ⛔ **Order Cancellation** with automatic inventory restore
-- 🔍 **Category Filtering**
-- 🧮 **Card & Table View Toggle** (for product browsing)
-- 🧾 **JWT Authorization** for private routes
-- 📱 **Responsive UI** with Tailwind & DaisyUI
-- ⚙️ **Real-time Notifications** using React Hot Toast
-- 🌈 **Animations** using Framer Motion and Lottie
+- 🔐 **Firebase Authentication** (Email/Password + Google)
+- 🛒 **Order Management System** with real-time inventory control
+- 🧾 **JWT Authorization** for protected backend routes
+- ⛔ **Order Cancellation** that restores product stock
+- 📦 **CRUD Operations** for product management
+- 🔍 **Product Filtering & Sorting**
+- 🔁 **Card/Table Toggle View** for browsing
+- 📲 **Mobile-First Responsive Design** using Tailwind & DaisyUI
+- 🌈 **Framer Motion + Lottie** animations
+- 🚨 **Toast Notifications** using `react-hot-toast`
+- ⭐ **Ratings, Sliders, and Typing Effects** for enhanced UX
 
 ---
 
-## 🧩 Tech Stack & NPM Packages Used
+## 🧩 Tech Stack
 
 ### 🔧 Frontend
 
-- **React 19**
-- **React Router DOM v7**
-- **Tailwind CSS + DaisyUI**
-- **Vite** (for fast build & development)
-- **Firebase** (authentication)
-- **Framer Motion** (animations)
-- **Lottie React** (animated illustrations)
-- **React Hook Form** (form handling)
-- **React Hot Toast** (toast notifications)
-- **React Icons**, **Lucide React** (icon sets)
-- **Swiper** (image slider)
-- **React Modal**
-- **React Simple Typewriter** (typing animation)
-- **React Rating Stars Component**
-- **Match Sorter**, **Sort By** (filtering/sorting helpers)
-- **LocalForage** (optional offline/local storage support)
+| Technology        | Purpose                                 |
+|------------------|------------------------------------------|
+| React 19         | Component-based frontend                 |
+| React Router v7  | Client-side routing                      |
+| Tailwind CSS     | Utility-first styling                    |
+| DaisyUI          | UI components built on Tailwind          |
+| Firebase         | Auth (email/password + Google)           |
+| Framer Motion    | Animations                               |
+| Lottie React     | Animated illustrations                   |
+| React Hot Toast  | Toast message UI                         |
+| React Hook Form  | Form handling                            |
+| Swiper           | Image sliders                            |
+| React Modal      | Popups/modal forms                       |
+| React Icons      | Icon support                             |
+| Lucide React     | Navigation and UI icons                  |
+| Match Sorter     | Advanced sorting                         |
+| Sort By          | Product sorting/filtering                |
+| LocalForage      | Optional offline storage (local)         |
 
 ### 🧪 Dev Dependencies
 
-- **Vite**
-- **TailwindCSS**
-- **DaisyUI**
-- **ESLint** with:
-  - `eslint-plugin-react-hooks`
-  - `eslint-plugin-react-refresh`
-- **PostCSS**, **Autoprefixer**
+- Vite (build tool)
+- ESLint (+ react-hooks & refresh plugins)
+- Tailwind CSS
+- PostCSS & Autoprefixer
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Getting Started (Local Setup)
 
 ### 1. Clone the repo
 
@@ -85,16 +82,19 @@ cd rupsha
 npm install
 ```
 
-### 3. Setup `.env` file
+### 3. Create `.env` file with Firebase & API values
 
 ```env
 VITE_API_URL=http://localhost:5000
 VITE_FIREBASE_API_KEY=your_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
-# and other Firebase env variables
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
 ```
 
-### 4. Run the development server
+### 4. Start development server
 
 ```bash
 npm run dev
@@ -102,4 +102,17 @@ npm run dev
 
 ---
 
-```
+## 🔗 Links
+
+* 🔴 Live Website: [https://rupshaa-1eb03.web.app](https://rupshaa-1eb03.web.app)
+* 🟢 GitHub Repo: [https://github.com/your-username/rupsha](https://github.com/your-username/rupsha)
+* 🟡 Firebase Console: [https://console.firebase.google.com](https://console.firebase.google.com) *(private)*
+
+---
+
+## 👩‍💻 Developed By
+
+**Umme Sadia Sayti**
+[Facebook](https://fb.com/umme.sadia.sayti) | [GitHub](https://github.com/sadia126)
+
+
