@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import useTitle from "../../Hooks/useTitle";
+import Loading from "../../Components/Loading/Loading";
 
 const CategoryProducts = () => {
     useTitle("Category Products");
@@ -49,9 +50,7 @@ const CategoryProducts = () => {
       />
 
       {products.length === 0 ? (
-        <p className="text-center text-gray-500 mt-10">
-          No products found in this category.
-        </p>
+        <Loading></Loading>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {products.map((product) => (
