@@ -27,7 +27,7 @@ const AddProduct = () => {
   const onSubmit = async (data) => {
     try {
       // send data to your backend API or Firebase
-      const res = await fetch("https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products", {
+      const res = await fetch("https://rupsha-server-side.vercel.app/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

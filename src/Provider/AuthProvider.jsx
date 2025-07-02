@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
 
 // Fetch JWT token and store it in localStorage
 const getJWT = async (email) => {
-  const res = await fetch("https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/jwt", {
+  const res = await fetch("https://rupsha-server-side.vercel.app/jwt", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),
@@ -35,6 +35,9 @@ const getJWT = async (email) => {
   if (data.token) {
     localStorage.setItem("access-token", data.token);
   }
+  else{
+    setUser(null);
+  }
 };
 
   
@@ -43,6 +46,7 @@ const googleLogin = () => {
   setLoading(true);
   return signInWithPopup(auth, googleProvider).then((result) => {
     const email = result.user?.email;
+    console.log("Google Login Result:", email);
     if (email) {
       getJWT(email);
     }
@@ -63,7 +67,7 @@ const googleLogin = () => {
   const login = (email, password) => {
   setLoading(true);
   return signInWithEmailAndPassword(auth, email, password).then((result) => {
-    getJWT(email); // Store token
+    getJWT(email);
     return result;
   });
 };

@@ -12,7 +12,7 @@ const AllProduct = () => {
   const [viewMode, setViewMode] = useState("card"); // 'card' or 'table'
 
   useEffect(() => {
-    fetch("https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products")
+    fetch("https://rupsha-server-side.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

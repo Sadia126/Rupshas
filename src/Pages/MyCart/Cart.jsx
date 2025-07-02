@@ -12,7 +12,7 @@ const Cart = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/my-orders?email=${user.email}`)
+      fetch(`https://rupsha-server-side.vercel.app/my-orders?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => setOrders(data))
         .catch((err) => console.error(err));
@@ -26,7 +26,7 @@ const Cart = () => {
     if (!confirmCancel) return;
 
     try {
-      const res = await fetch(`https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/cancel-order/${orderId}`, {
+      const res = await fetch(`https://rupsha-server-side.vercel.app/cancel-order/${orderId}`, {
         method: "DELETE",
       });
       const data = await res.json();

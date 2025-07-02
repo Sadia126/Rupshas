@@ -29,15 +29,15 @@ const Banner = () => {
   ];
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full max-h-[70vh] overflow-hidden">
       <Swiper
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper"
+        className="mySwiper w-full h-full"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[300px] md:h-screen">
+            <div className="relative w-full h-[50vh] md:h-[65vh] lg:h-[70vh]">
               <img
                 src={slide.img}
                 alt={`Banner Slide ${index + 1}`}

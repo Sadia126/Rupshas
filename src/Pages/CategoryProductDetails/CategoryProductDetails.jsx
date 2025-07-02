@@ -18,7 +18,7 @@ const CategoryProductDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products/${id}`)
+    fetch(`https://rupsha-server-side.vercel.app/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -46,7 +46,7 @@ const CategoryProductDetails = () => {
 
     try {
       const res = await fetch(
-        `https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products/buy/${products._id}`,
+        `https://rupsha-server-side.vercel.app/products/buy/${products._id}`,
         {
           method: "POST",
           headers: {

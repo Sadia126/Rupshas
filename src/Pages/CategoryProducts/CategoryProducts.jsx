@@ -11,7 +11,7 @@ const CategoryProducts = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products/category/${categoryName}`)
+    fetch(`https://rupsha-server-side.vercel.app/products/category/${categoryName}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

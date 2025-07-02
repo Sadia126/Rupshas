@@ -31,7 +31,7 @@ const UpdateProduct = () => {
 
   // Fetch product data by ID
   useEffect(() => {
-    fetch(`https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products/${id}`)
+    fetch(`https://rupsha-server-side.vercel.app/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         reset(data); 
@@ -47,7 +47,7 @@ const UpdateProduct = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await fetch(`https://rupsha-server-side-bvxho16mk-sadia126s-projects.vercel.app/products/${id}`, {
+      const res = await fetch(`https://rupsha-server-side.vercel.app/products/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
