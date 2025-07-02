@@ -63,7 +63,7 @@ const Category = () => {
         {categories.map((category, index) => (
           <div
             key={index}
-            className="flex flex-col bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300 hover:-translate-y-1"
+            className="flex flex-col  shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300 hover:-translate-y-1"
           >
             <img
               src={category.image}
@@ -73,7 +73,7 @@ const Category = () => {
             <div className="flex flex-col justify-between flex-1 p-4">
               <div>
                 <h3 className="text-lg font-semibold mb-2 text-center">{category.name}</h3>
-                <p className="text-sm text-gray-600 text-center mb-4">{category.description}</p>
+                <p className="text-sm  text-center mb-4">{category.description}</p>
               </div>
               <button
                 onClick={() => handleCategoryClick(category.name)}

@@ -11,6 +11,7 @@ import CategoryProducts from "../Pages/CategoryProducts/CategoryProducts";
 import CategoryProductDetails from "../Pages/CategoryProductDetails/CategoryProductDetails";
 import Cart from "../Pages/MyCart/Cart";
 import ErrorPage from "../Pages/404Page/ErrorPage";
+import Categories from "../Pages/Categories/Categories";
 // import CategoryProducts from "../Pages/CategoryProducts/CategoryProducts";
 
 export const router = createBrowserRouter([
@@ -38,6 +39,9 @@ export const router = createBrowserRouter([
             <AddProduct></AddProduct>
           </PrivateRoute>
         ),
+      },{
+        path:"/categories",
+        element: <Categories></Categories>
       },
       {
         path: "/allProduct",

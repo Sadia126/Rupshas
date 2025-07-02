@@ -39,10 +39,10 @@ const ChooseUsSection = () => {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((item, idx) => (
-          <div key={idx} className="bg-white shadow p-6 rounded text-center">
+          <div key={idx} className=" shadow p-6 rounded text-center">
             <div className="flex justify-center mb-4">{item.icon}</div>
             <h3 className="font-semibold text-lg">{item.title}</h3>
-            <p className="text-gray-600 mt-2">{item.desc}</p>
+            <p className=" mt-2">{item.desc}</p>
           </div>
         ))}
       </div>

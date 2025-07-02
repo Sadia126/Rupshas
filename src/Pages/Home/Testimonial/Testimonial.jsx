@@ -36,9 +36,9 @@ const Testimonial = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-lg"
+            className=" shadow-md rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-lg"
           >
-            <p className="italic text-gray-700">“{testimonial.text}”</p>
+            <p className="italic ">“{testimonial.text}”</p>
             <div className="flex items-center mt-4">
               <img
                 src={testimonial.image}
@@ -46,8 +46,8 @@ const Testimonial = () => {
                 className="w-10 h-10 rounded-full"
               />
               <div className="ml-3">
-                <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                <p className="text-sm text-gray-600">{testimonial.username}</p>
+                <h4 className="font-semibold ">{testimonial.name}</h4>
+                <p className="text-sm ">{testimonial.username}</p>
               </div>
             </div>
           </div>

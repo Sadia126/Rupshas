@@ -4,7 +4,7 @@ import animationData from "../../assets/404.json";
 
 const ErrorPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-[#f0f8ff]">
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 ">
       <Lottie
         animationData={animationData}
         style={{ height: "300px", width: "300px" }}
@@ -17,7 +17,8 @@ const ErrorPage = () => {
       </p>
       <Link
         to="/"
-        className="bg-[#64aab4] text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-[#54929c] transition"
+        className="bg-[#64aab4] text-white px-6 py-2 rounded-full font-semibold shadow
+         hover:bg-[#54929c] transition"
       >
         Go Back Home
       </Link>

@@ -55,7 +55,7 @@ const AddProduct = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6 bg-white p-6 rounded shadow"
+        className="space-y-6  p-6 rounded shadow"
       >
         {/* Image */}
         <div>
@@ -172,7 +172,7 @@ const AddProduct = () => {
             value={user?.email}
             readOnly
             {...register("email", { required: "Email is required" })}
-            className="input input-bordered w-full bg-gray-100 cursor-not-allowed"
+            className="input input-bordered w-full  cursor-not-allowed"
           />
         </div>
 

@@ -79,7 +79,7 @@ const CategoryProductDetails = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div
-        className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-start
+        className=" rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-start
        gap-6"
       >
         <img
@@ -89,14 +89,14 @@ const CategoryProductDetails = () => {
         />
         <div className="md:w-1/2">
           <h1 className="text-3xl font-bold mb-2">{products.name}</h1>
-          <p className="text-gray-700 mb-4">{products.description}</p>
+          <p className=" mb-4">{products.description}</p>
           <p className="text-lg font-semibold text-[#6a9c9f] mb-1">
             ৳ {products.price}
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm ">
             Available: {products.main_quantity}
           </p>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm  mb-4">
             Minimum Selling Quantity: {products.minimum_selling_quantity}
           </p>
           <button
@@ -111,36 +111,37 @@ const CategoryProductDetails = () => {
       <Modal
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
-        className="bg-white rounded-lg shadow-xl p-6 max-w-md mx-auto mt-20 outline-none"
+        className=" rounded-lg shadow-xl p-6 max-w-md mx-auto mt-20 outline-none bg-[#6fa7af]"
         overlayClassName="fixed inset-0 bg-black/80 flex justify-center items-start z-50"
       >
         <h2 className="text-xl font-bold mb-4">Checkout</h2>
         <form onSubmit={handleBuy} className="space-y-4">
           <div>
-            <label className="block font-medium text-gray-700">Name</label>
+            <label className="block font-medium 
+            ">Name</label>
             <input
               type="text"
               value={user?.displayName}
               readOnly
-              className="w-full border rounded px-3 py-2 mt-1 bg-gray-100"
+              className="w-full border rounded px-3 py-2 mt-1 "
             />
           </div>
           <div>
-            <label className="block font-medium text-gray-700">Email</label>
+            <label className="block font-medium ">Email</label>
             <input
               type="email"
               value={user?.email}
               readOnly
-              className="w-full border rounded px-3 py-2 mt-1 bg-gray-100"
+              className="w-full border rounded px-3 py-2 mt-1 "
             />
           </div>
           <div>
-            <label className="block font-medium text-gray-700">Quantity</label>
+            <label className="block font-medium ">Quantity</label>
             <div className="flex items-center mt-1">
               <button
                 type="button"
                 onClick={decreaseQty}
-                className="px-3 py-1 border rounded-l bg-gray-200 hover:bg-gray-300"
+                className="px-3 py-1 border rounded-l "
               >
                 -
               </button>
@@ -154,7 +155,7 @@ const CategoryProductDetails = () => {
               <button
                 type="button"
                 onClick={increaseQty}
-                className="px-3 py-1 border rounded-r bg-gray-200 hover:bg-gray-300"
+                className="px-3 py-1 border rounded-r "
               >
                 +
               </button>

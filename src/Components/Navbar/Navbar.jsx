@@ -6,6 +6,8 @@ import logo from "../../assets/logo.png";
 import { FaSignOutAlt } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import useAuth from "../../Hooks/UseAuth";
+import { IoMdSunny } from "react-icons/io";
+import { IoMoon } from "react-icons/io5";
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,10 +18,13 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Categories", path: "/categories" },
-    { name: "All Product", path: "/allProduct" },
-    { name: "Add Product", path: "/addProduct" },
-    { name: "My Product", path: "/myProduct" },
+      ...(user ? [
+      { name: "All Product", path: "/categories" },
+      { name: "Add Product", path: "/addProduct" },
+      // { name: "My Product", path: "/myProduct" },
+      // { name: "Dashboard", path: "/dashboard" },
+    ] : []),
+    { name: "Update Product", path: "/allProduct" },
     { name: "Cart", path: "/Cart" },
   ];
 
@@ -32,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-[#8bcbd4] shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -56,8 +61,8 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-gray-700 transition hover:border-b-2 border-black
-                     hover:bg-gray-200 px-2 py-1 rounded ${
+                className={` transition hover:border-b-2 border-black
+                      px-2 py-1 rounded ${
                        isActive(link.path) ? "border-b-2 border-black" : ""
                      }`}
               >
@@ -68,6 +73,30 @@ const Navbar = () => {
 
           {/* Auth Buttons or Profile (Desktop) */}
           <div className="hidden md:flex items-center space-x-4">
+             <label className="swap swap-rotate cursor-pointer">
+              <input
+                type="checkbox"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                    localStorage.setItem("theme", "dark");
+                  } else {
+                    document.documentElement.setAttribute(
+                      "data-theme",
+                      "light"
+                    );
+                    localStorage.setItem("theme", "light");
+                  }
+                }}
+                defaultChecked={localStorage.getItem("theme") === "dark"}
+              />
+
+              {/* Sun icon (light mode) */}
+              <IoMdSunny className="swap-on w-8 h-8 text-yellow-500" />
+
+              {/* Moon icon (dark mode) */}
+              <IoMoon className="swap-off w-8 h-8 text-gray-700" />
+            </label>
             {!user ? (
               <>
                 <Link

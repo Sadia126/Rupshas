@@ -10,8 +10,8 @@ const AllProduct = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAvailableOnly, setShowAvailableOnly] = useState(false);
-  const [viewMode, setViewMode] = useState("card"); // 'card' or 'table'
-  const [sortBy, setSortBy] = useState(""); // sorting field
+  const [viewMode, setViewMode] = useState("table"); 
+  const [sortBy, setSortBy] = useState(""); 
 
   useEffect(() => {
     fetch("https://rupsha-server-side.vercel.app/products")
@@ -59,7 +59,7 @@ const AllProduct = () => {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="border rounded px-4 py-2"
+            className="border rounded px-4 py-2 bg-[#6fa7af]"
           >
             <option value="">Sort By</option>
             <option value="priceLowHigh">Price: Low to High</option>
@@ -72,7 +72,7 @@ const AllProduct = () => {
           <select
             value={viewMode}
             onChange={(e) => setViewMode(e.target.value)}
-            className="border rounded px-4 py-2"
+            className="border rounded px-4 py-2 bg-[#6fa7af]"
           >
             <option value="card">Card View</option>
             <option value="table">Table View</option>
@@ -88,7 +88,7 @@ const AllProduct = () => {
           {sortedProducts.map((product) => (
             <div
               key={product._id}
-              className="bg-white shadow rounded-lg overflow-hidden"
+              className=" shadow rounded-lg overflow-hidden"
             >
               <img
                 src={product.image}
@@ -97,16 +97,16 @@ const AllProduct = () => {
               />
               <div className="p-4">
                 <h2 className="text-lg font-semibold">{product.name}</h2>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm ">
                   Brand: <span className="font-medium">{product.brand}</span>
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm ">
                   Category: <span className="font-medium">{product.category}</span>
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm ">
                   Price: ৳{product.price} | Rating: {product.rating}
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm ">
                   Quantity: {product.main_quantity}
                 </p>
                 <div className="mt-4 text-right">
@@ -123,8 +123,8 @@ const AllProduct = () => {
         </div>
       ) : (
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white shadow rounded">
-            <thead className="bg-[#6b9fa1] text-white">
+          <table className="min-w-full  shadow rounded">
+            <thead className="bg-[#6b9fa1] ">
               <tr>
                 <th className="py-2 px-4 text-left">Image</th>
                 <th className="py-2 px-4 text-left">Name</th>

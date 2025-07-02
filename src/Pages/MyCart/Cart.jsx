@@ -47,7 +47,7 @@ const Cart = () => {
       <h2 className="text-2xl font-bold mb-4 text-center">🛒 My Orders</h2>
 
       {orders.length === 0 ? (
-        <p className="text-gray-500 text-center">No orders found.</p>
+        <p className=" text-center">No orders found.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <AnimatePresence>
@@ -58,7 +58,7 @@ const Cart = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="border p-4 rounded shadow bg-white"
+                className="border p-4 rounded shadow "
               >
                 <img
                   src={order.productImage}

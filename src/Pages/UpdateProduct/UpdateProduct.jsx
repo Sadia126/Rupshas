@@ -80,7 +80,7 @@ const UpdateProduct = () => {
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6 bg-white p-6 rounded shadow"
+        className="space-y-6  p-6 rounded shadow"
       >
         {/* Image */}
         <div>
