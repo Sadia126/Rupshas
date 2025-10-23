@@ -9,6 +9,7 @@ const Categories = () => {
   useTitle("All Products");
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState(""); //  Search state
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const Categories = () => {
         console.error("Error fetching products:", err);
         setLoading(false);
       });
-  }, []); // No categoryName dependency
+  }, []);
 
   const handleDetails = (id) => {
     navigate(`/product/${id}`);
@@ -47,6 +48,16 @@ const Categories = () => {
     return <div className="flex mt-1">{stars}</div>;
   };
 
+  // Search filter logic
+  const filteredProducts = products.filter((product) => {
+    const term = searchTerm.toLowerCase();
+    return (
+      product?.name?.toLowerCase().includes(term) ||
+      product?.brand?.toLowerCase().includes(term) ||
+      product?.category?.toLowerCase().includes(term)
+    );
+  });
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       <SectionTitle
@@ -54,16 +65,28 @@ const Categories = () => {
         subtitle="Discover amazing deals on all products"
       />
 
+      {/*  Search Input */}
+      <div className="mb-8 flex justify-center">
+        <input
+          type="text"
+          placeholder=" Search by name, brand, or category..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="border border-gray-300 rounded-lg px-4 py-2 w-full sm:w-2/3 md:w-1/2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#6b9fa1]"
+        />
+      </div>
+
+      {/* Product Grid */}
       {loading ? (
         <Loading />
-      ) : products.length === 0 ? (
-        <p className="text-center ">No products found.</p>
+      ) : filteredProducts.length === 0 ? (
+        <p className="text-center text-gray-500">No products found.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div
               key={product?._id}
-              className=" flex flex-col justify-between h-full rounded shadow hover:shadow-md p-4 transition"
+              className="flex flex-col justify-between h-full rounded shadow hover:shadow-md p-4 transition"
             >
               <img
                 src={product?.image}
@@ -73,13 +96,9 @@ const Categories = () => {
               <div className="flex-1 flex flex-col justify-between">
                 <div>
                   <h2 className="text-lg font-semibold">{product?.name}</h2>
-                  <p className="text-sm ">
-                    Brand: {product?.brand}
-                  </p>
-                  <p className="text-sm ">
-                    Category: {product?.category}
-                  </p>
-                  <p className="text-sm ">
+                  <p className="text-sm">Brand: {product?.brand}</p>
+                  <p className="text-sm">Category: {product?.category}</p>
+                  <p className="text-sm">
                     Quantity: {product?.minimum_selling_quantity}
                   </p>
                   <p className="text-sm my-2">
