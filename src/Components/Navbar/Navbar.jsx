@@ -26,6 +26,7 @@ const Navbar = () => {
     ] : []),
     { name: "Update Product", path: "/allProduct" },
     { name: "Cart", path: "/Cart" },
+    { name: "Favorite", path: "/love" },
   ];
 
   const isActive = (path) => location.pathname === path;

@@ -12,6 +12,7 @@ import CategoryProductDetails from "../Pages/CategoryProductDetails/CategoryProd
 import Cart from "../Pages/MyCart/Cart";
 import ErrorPage from "../Pages/404Page/ErrorPage";
 import Categories from "../Pages/Categories/Categories";
+import Favorite from "../Pages/Favorite/Favorite";
 // import CategoryProducts from "../Pages/CategoryProducts/CategoryProducts";
 
 export const router = createBrowserRouter([
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       },{
         path:"/categories",
         element: <Categories></Categories>
+      },
+      {
+        path:"/love",
+        element: <PrivateRoute><Favorite></Favorite></PrivateRoute>
       },
       {
         path: "/allProduct",
